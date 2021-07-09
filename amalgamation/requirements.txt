@@ -1,0 +1,7 @@
+image
+pillow==7.1.2
+pytesseract
+scikit-build
+opencv-python
+Flask
+flask-restful
