@@ -1,6 +1,6 @@
 # flask-tess5
 
-A docker environment for running a flask server with Tesseract-OCR v.5
+A docker environment for running a Flask server with Tesseract-OCR v.5
 
 ## Set up
 
