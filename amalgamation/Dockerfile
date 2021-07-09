@@ -1,6 +1,6 @@
 FROM cakecrusher/tesseract5 AS ut5
 
-FROM python
+FROM python:3.7-slim
 
 # Setting up code env
 RUN mkdir code
@@ -10,7 +10,7 @@ WORKDIR /code
 RUN apt-get update && \
     apt-get install -y ffmpeg libsm6 libxext6
 COPY /requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copying Tesseract-OCR v.5
 COPY --from=ut5 /usr/local/bin/ /usr/local/bin/

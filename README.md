@@ -1,9 +1,29 @@
 # flask-tess5
 
-### Inside the tesseract5-setup directory run
-  docker build -t ubuntu-tesseract5 .
-### Inside the video-preprocessing directory run
-  docker-compose up
-### Once everything is set up and the server is running
-  send a get request to localhost:5000/test
-    a proof-test.jpg image should be generated in media with text identified
+A docker environment for running a flask server with Tesseract-OCR v.5
+
+## Set up
+
+Clone the repo
+```bash
+git clone https://github.com/CakeCrusher/flask-tesseract5.git
+```
+Navigate to amalgamation directory
+```bash
+cd amalgamation
+```
+Initiate docker compose
+```bash
+docker-compose up
+```
+
+## Docker images
+
+Tesseract-OCR v.5
+```bash
+docker pull cakecrusher/tesseract5
+```
+Flask server with Tesseract-OCR v.5
+```bash
+docker pull cakecrusher/flask-ocr
+```
